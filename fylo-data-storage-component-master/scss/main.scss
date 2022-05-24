@@ -1,3 +1,11 @@
-body {
-  background-color: antiquewhite;
-}
+// abstracts/
+// vendors/
+// base/
+// layout/
+// components/
+// pages/
+// themes/
+@use 'abstracts';
+@use 'base';
+@use 'layout';
+@use 'components';

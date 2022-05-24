@@ -19,31 +19,31 @@
     
   </style>
 </head>
-<body>
+<body class="body">
 <div class="container">
-
-  <main class="main">
-    <div class="brand-nav">
+    <header class="header">
+      <div class="brand-nav">
         <img src="./images/logo.svg" alt="" class="brand-nav__logo">
 
-        <nav>
+        <nav class="brand-nav__files">
           <a href="#"><img src="./images/icon-document.svg" alt=""></a>
           <a href="#"><img src="./images/icon-folder.svg" alt="">
-          <a href="#"></a>
-          <img src="./images/icon-upload.svg" alt=""></a>
-          
+          <a href="#"><img src="./images/icon-upload.svg" alt=""></a>  
         </nav>
       </div>
-  <div>
-    <h2>You’ve used 815 GB of your storage</h2>
-    <div class="slide-container">
-      <input type="rage" min="0" max="1000" value="815" class="slider" id="range-slider">
-      <p>0 GB</p>
-      <p>1000 GB</p>
+      </header>
+      <main class="main">
+    
+    <div class="slide-container range">
+      <h2 class="title">You’ve used <span class="title__boldtext">815 GB </span> of your storage</h2>
       <div>
-        <p>185 GB Left</p>
+        <input type="range" min="0" max="1000" value="815" class="slider range__input" id="slider">
+      <p class=" range__minvalue">0 GB</p>
+      <p class="range__maxvalue">1000 GB</p>
+      <div >
+      <p class="range__leftvalue">185 GB Left</p>
       </div>
-    </div>
+  </div>
   </div>
   </main>
   

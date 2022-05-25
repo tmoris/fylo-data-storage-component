@@ -132,9 +132,7 @@ small, .text_small {
   height: -moz-fit-content;
   height: fit-content;
   padding: 3em;
-}
-.slide-container::-webkit-progress-value {
-  background-color: var(--Gradient);
+  border-radius: 0.5em;
 }
 
 .title {
@@ -154,13 +152,22 @@ small, .text_small {
   bottom: 0.5em;
   right: 3em;
 }
-.range__leftvalue {
+
+.range-left {
   position: absolute;
-  top: 0;
-  right: 12em;
-  padding: 1em;
-  border-radius: 0.5em 0.5em 0 0.5em;
+  top: -2em;
+  right: 3em;
   background-color: var(--white);
+}
+.range-left__value {
+  font-weight: var(--font-weight--bold);
+  font-size: 2rem;
+  color: var(--verydarkblue);
+  padding: 0 0.5em;
+}
+.range-left__value--lighttext {
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 .slider {

@@ -202,5 +202,6 @@ small, .text_small {
 }
 
 .footer {
-  margin: 0 auto;
+  position: absolute;
+  bottom: 1em;
 }/*# sourceMappingURL=main.css.map */

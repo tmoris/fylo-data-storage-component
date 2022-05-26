@@ -134,7 +134,6 @@ small, .text_small {
   height: fit-content;
   padding: 3em;
   border-radius: 0.5em;
-  align-self: baseline;
 }
 
 .title {

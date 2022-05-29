@@ -54,12 +54,22 @@ img {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "header main" "footer footer";
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding-inline: 2em;
+  max-width: 60em;
 }
 
+@media (min-width: 40.75em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "header main main" "footer footer";
+    gap: 1rem;
+  }
+}
 p {
   margin-bottom: 1rem;
   max-width: 35em;
@@ -103,7 +113,7 @@ small, .text_small {
   overflow: hidden;
   background-color: var(--darkblue);
   border-radius: 0.5em 8em 0.5em 0.5em;
-  grid-row: span 2;
+  min-width: 20em;
 }
 
 .brand-nav {
@@ -117,6 +127,7 @@ small, .text_small {
 .brand-nav__files {
   display: flex;
   gap: 1em;
+  margin: 2em 0;
 }
 .brand-nav__files > * {
   background-color: var(--verydarkblue);
@@ -156,34 +167,55 @@ small, .text_small {
 
 .range-left {
   position: absolute;
-  top: -2em;
-  right: 3em;
+  bottom: -2em;
+  right: 50%;
   background-color: var(--white);
-  border-radius: 0.5em 0.5em 0 0.5em;
+  border-radius: 0.5em;
 }
 .range-left__value {
   font-weight: var(--font-weight--bold);
   font-size: 2rem;
   color: var(--verydarkblue);
-  padding: 0.5em;
+  padding: 0.25em 0.5em;
   margin: 0;
 }
 .range-left__value--lighttext {
   font-size: 1rem;
   opacity: 0.6;
 }
-.range-left::after {
-  content: "";
-  width: 2em;
-  height: 2em;
-  background-color: var(--white);
-  position: absolute;
-  z-index: 100;
-  bottom: -1em;
-  right: 0;
-  border-radius: 0 1em 0 2em;
-}
 
+@media (min-width: 40.75em) {
+  .range-left {
+    position: absolute;
+    top: -2em;
+    right: 3em;
+    bottom: 70%;
+    background-color: var(--white);
+    border-radius: 0.5em 0.5em 0 0.5em;
+  }
+  .range-left__value {
+    font-weight: var(--font-weight--bold);
+    font-size: 2rem;
+    color: var(--verydarkblue);
+    padding: 0.5em;
+    margin: 0;
+  }
+  .range-left__value--lighttext {
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+  .range-left::after {
+    content: "";
+    width: 2em;
+    height: 2em;
+    background-color: var(--white);
+    position: absolute;
+    z-index: 100;
+    bottom: -1em;
+    right: 0;
+    border-radius: 0 1em 0 2em;
+  }
+}
 .slider {
   -webkit-appearance: none;
      -moz-appearance: none;

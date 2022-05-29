@@ -36,9 +36,21 @@ img {
   object-fit: cover;
 }
 .container {
+  display: flex;
+ flex-direction: column;
+ gap: 1em;
+ width: 100%;
+padding-inline: 2em;
+max-width: 60em;
+}
+
+@media(min-width: 40.75em) {
+.container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: 'header main'
+  grid-template-areas: 'header main main'
 'footer footer';
   gap: 1rem;
+  
+}
 }

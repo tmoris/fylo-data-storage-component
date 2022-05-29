@@ -3,7 +3,8 @@
   overflow: hidden;
   background-color: var(--darkblue);
   border-radius: 0.5em 8em 0.5em 0.5em;
-  grid-row: span 2;
+  min-width: 20em;
+
   
 }
 .brand-nav {
@@ -18,6 +19,7 @@
   &__files {
     display: flex;
     gap: 1em;
+    margin: 2em 0;
   
     & >* {
       background-color: var(--verydarkblue);
